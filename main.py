@@ -1,6 +1,7 @@
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction import DictVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 
 
 def datasets_demo():
@@ -20,6 +21,15 @@ def dict_demo():
     transfer = DictVectorizer(sparse=False)
     data_new = transfer.fit_transform(data)
     print(data_new)
+    print(transfer.feature_names_)
+    return None
+
+def count_demo():
+    data = ["life is short,i like python","life is too long,i dislike python"]
+    transfer = CountVectorizer()
+    data_new = transfer.fit_transform(data)
+    print(data_new)
+
     return None
 
 
@@ -27,4 +37,4 @@ def dict_demo():
 
 if __name__ == '__main__':
     # datasets_demo()
-    dict_demo()
+    count_demo()
