@@ -30,11 +30,12 @@ def count_demo():
     data_new = transfer.fit_transform(data)
     print(data_new)
 
+
     return None
 
 
 
 
 if __name__ == '__main__':
-    # datasets_demo()
+    datasets_demo()
     count_demo()
